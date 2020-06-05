@@ -19,7 +19,7 @@ See [Microsoft/pxt-ws2812b](https://makecode.microbit.org/pkg/microsoft/pxt-ws28
 ```blocks
 // Create a NeoPixel driver - specify the pin, number of LEDs, and the type of 
 // the NeoPixel srip, either standard RGB (with GRB or RGB format) or RGB+White.
-let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB);
+let strip = Neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB);
 
 // set pixel colors
 strip.setPixelColor(0, NeoPixelColors.White); // white
@@ -39,7 +39,7 @@ Use ``||setPixelWhiteLED||`` to set brightness of the white pixel for RGB+W stri
 
 ## HSL color format
 
-Use `neopixel.hslToRgb()` to create colors using hue, saturation, and lightness.
+Use `Neopixel.hslToRgb()` to create colors using hue, saturation, and lightness.
 
 ## Example: Using accelerometer to control colors
 
@@ -47,7 +47,7 @@ This little program will let the position of the microbit control the color of t
 This first LED will then get shifted further away every 100ms.
 
 ```blocks
-let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB_RGB)
+let strip = Neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB_RGB)
 while (true) {
     let x = input.acceleration(Dimension.X) / 2;
     let y = input.acceleration(Dimension.Y) / 2;
